@@ -30,9 +30,9 @@
 }
 
 body {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    height: 100vh;
     background-color: var(--bg-primary);
 }
 
@@ -47,22 +47,24 @@ header {
 }
 
 main {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-.info-container {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
+    padding: 20px;
+    gap: 20px;
+}
 
-    width: 940px;
-    height: 190px;
-    margin: 20px;
-    padding: 10px;
+.info-container {
+    width: min(940px, 100%);
+    min-height: 190px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
 
     border-radius: 1rem;
     background-color: var(--bg-card);
@@ -71,20 +73,22 @@ main {
 
 .info-container p {
     font-size: 12.5px;
+    text-align: center;
 }
 
 .container {
+    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: stretch;
+    gap: 20px;
 }
 
 .containerHip,
 .containerCat {
-    margin: 0 20px;
-    margin-top: 40px;
-    height: 375px;
     width: 450px;
+    min-height: 300px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,6 +103,7 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     margin-top: 10px;
 
     color: var(--text-secondary);
@@ -119,39 +124,65 @@ label {
 }
 
 input {
+    width: 100px;
     margin: 10px 0;
     padding: 10px;
-    width: 100px;
+
     font-size: 15px;
-    border-radius: 0.5rem;
     text-align: center;
 
     color: var(--bg-primary);
-    border: var(--border);
+    background-color: white;
+
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
 }
 
-.footer-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    background-color: var(--bg-secondary);
-    color: var(--text-secondary);
+input:focus {
+    outline: 2px solid var(--primary);
 }
 
 .btn {
     width: 100px;
-    padding: 10px;
-    font-size: 15px;
     margin-top: 10px;
+    padding: 10px;
+
+    font-size: 15px;
 
     color: var(--text-primary);
     background-color: var(--border);
-    border: var(--bg-primary);
+
+    border: none;
     border-radius: 0.5rem;
+
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .btn:hover {
     background-color: var(--success);
+}
+
+.footer-container {
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+
+@media (max-width: 950px) {
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .containerHip,
+    .containerCat {
+        width: min(450px, 100%);
+    }
 }
