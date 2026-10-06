@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/JavaScript com o Navegador/CSS/styles.css">
+    <script src="/JavaScript com o Navegador/JS/script.js" defer></script>
+    <title>Resolver Teorema de Pitágoras</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Calculadora para Teorema de Pitágoras</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="info-container">
+            <h2>Informações importantes sobre Teorema de Pitágoras:</h2>
+            <p>O Teorema de Pitágoras estabelece que, em qualquer triângulo retângulo, o quadrado da hipotenusa é igual
+                à soma dos quadrados dos catetos.</p>
+            <h3>O que significam os termos?</h3>
+            <ul>
+                <li>Triângulo retângulo: Uma figura com um ângulo reto de 90 graus.</li>
+                <li>Hipotenusa: O lado maior, que fica oposto ao ângulo de 90 graus.</li>
+                <li>Catetos: Os dois lados menores que formam o ângulo reto.</li>
+            </ul>
+            <h3>A Fórmula:</h3>
+            <p>A fórmula matemática é escrita como: <strong>a² + b² = c²</strong></p>
+            <p>Onde <strong>c</strong> (ou a dependendo da notação) é a hipotenusa. <strong>a</strong> e
+                <strong>b</strong> são os catetos.</p>
+        </div>
+        <div class="container">
+            <div class="containerHip">
+                <h2>Preencha com as medidas dos Catetos</h2>
+                <h2>para calcular a medida da Hipotenusa</h2>
+                <form>
+                    <label for="resultCalc1">Hipotenusa</label>
+                    <input type="number" placeholder="0" id="resultCalc1" readonly>
+                    <label for="medCat1">Cateto Oposto</label>
+                    <input type="number" placeholder="0" id="medCat1">
+                    <label for="medCat2">Cateto Adjacente</label>
+                    <input type="number" placeholder="0" id="medCat2">
+                </form>
+                <button class="btn" id="btnCalc1">Calcular</button>
+            </div>
+            <div class="containerCat">
+                <h2>Preencha as medidas da Hipotenusa e do Cateto</h2>
+                <h2>para calcular a medida do outro Cateto</h2>
+                <form>
+                    <label for="medHip">Hipotenusa</label>
+                    <input type="number" placeholder="0" id="medHip">
+                    <label for="resultCalc2">Cateto 1</label>
+                    <input type="number" placeholder="0" id="resultCalc2" readonly>
+                    <label for="medCat3">Cateto 2</label>
+                    <input type="number" placeholder="0" id="medCat3">
+                </form>
+                <button class="btn" id="btnCalc2">Calcular</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026</p>
+        </div>
+    </footer>
+</body>
+
+</html>
