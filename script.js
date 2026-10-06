@@ -24,7 +24,6 @@ function calcHipotenusa(a, b) {
     return result1;
 }
 
-
 function calcCateto(a, b) {
 
     const firstStep = (a ** 2) - (b ** 2);
@@ -35,7 +34,6 @@ function calcCateto(a, b) {
 }
 
 function clean() {
-
 }
 
 // Botão chamando a função
@@ -45,17 +43,8 @@ btnCalc1.addEventListener("click", function () {
     const valueCat1 = parseFloat(medCat1.value);
     const valueCat2 = parseFloat(medCat2.value);
 
-    if (valueCat1 < valueCat2) {
-        resultCalc1.value = "0"
-        resultCalc1.style.color = "red";
-    }
-    else {
-        resultCalc1.value = calcHipotenusa(valueCat1, valueCat2);
-        resultCalc1.style.color = "";
-    }
-
+    resultCalc1.value = calcHipotenusa(valueCat1, valueCat2);
 });
-
 
 btnCalc2.addEventListener("click", function () {
 
